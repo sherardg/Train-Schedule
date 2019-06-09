@@ -1,0 +1,18 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.2em;
+}
+
+.header {
+    width: 100%;
+    background: brown;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.formBox {
+    background-origin: 2px solid blue;
+}
