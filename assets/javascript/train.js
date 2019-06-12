@@ -33,7 +33,25 @@
         destinaton: destination,
         firstTrainTime: firstTrainTime,
         frequency: frequency,
+        dateAdded: firebase.database.ServerValue.TIMESTAMP
   };
     db.ref().push(newTrain);
   });
 
+  // Firebase watcher + initial loader HINT: This code behaves similarly to .on("value")
+  dataRef.ref().on("child_added", function(childSnapshot) {
+
+    // Log everything that's coming out of snapshot
+    console.log(childSnapshot.val().trainName);
+    console.log(childSnapshot.val().destination);
+    console.log(childSnapshot.val().firstTrainTime);
+    console.log(childSnapshot.val().frequency);
+  },
+
+  dataRef.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot) {
+    // Change the HTML to reflect
+    $("#trainName").text(snapshot.val().trainName);
+    $("#destination").text(snapshot.val().destination);
+    $("#firstTrainTime").text(snapshot.val().firstTrainTime);
+    $("#frequency").text(snapshot.val().frequency);
+  }))

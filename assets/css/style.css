@@ -16,3 +16,12 @@ body{
 .formBox {
     background-origin: 2px solid blue;
 }
+
+table, th, td {
+    border: 1px solid blue;
+    padding: 10px;
+  }
+
+  th {
+      text-align: center;
+  }
