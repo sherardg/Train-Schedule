@@ -5,31 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Train Schedule</title>
+    <!-- Link to bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Link to css file -->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-   
+   <!-- Link to moment.js -->
+   <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
 </head>
 <body>
     <!-- Header -->
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
+        <div class="jumbotron">
                 <div class="header">
                     <h1>Anytime is Train Time</h1>
                     <h3>Choo Choo. Chee Chee.</h3>
                 </div>
-            </div>
         </div>
     </div>
 <!-- Section for Current Train Schedule -->
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">Current Schedule</div>
             <!-- Table for train schedule -->
             
 <table class="table table-striped" id="trainSchedule">
-<caption>Current Train Schedule</caption>
+
   <thead>
     <tr>
       <th scope="col">Train Name</th>
@@ -40,13 +42,17 @@
     </tr>
   </thead>
   <tbody>
-      <tr>
+      <!-- <tr>
           <td id="trainName"></td>
           <td id="destination"></td>
           <td id="frequency"></td>
           <td id="nextArrival"></td>
           <td id="minAway"></td>
-      </tr>
+      </tr> -->
+
+
+
+
   
   </tbody>
 </table>
@@ -59,7 +65,7 @@
     <section id="mainContent">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="card">
                         <form>
                             <div class="form-group">
                                 <label for="trainName">Train Name</label>
@@ -81,7 +87,7 @@
                                 <input type="text" class="form-control" id="frequency">
                             </div>
 
-                            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                            <button type="submit" class="btn btn-info" id="submit">Submit</button>
                         </form>
                             
 
