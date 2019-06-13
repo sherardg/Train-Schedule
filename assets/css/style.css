@@ -6,11 +6,15 @@ body{
 
 .header {
     width: 100%;
-    background: brown;
+    background: rgb(31, 141, 175);
     text-align: center;
     padding: 20px;
     color: white;
     margin-bottom: 20px;
+}
+
+.jumbotron {
+    padding: 10px;
 }
 
 .formBox {
@@ -20,8 +24,19 @@ body{
 table, th, td {
     border: 1px solid blue;
     padding: 10px;
+    
   }
 
-  th {
-      text-align: center;
+  .card {
+      border: 1px solid #369;
+      margin-bottom: 20px;
   }
+
+  .card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    background: #369;
+    color: #fff;
+}

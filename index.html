@@ -10,7 +10,7 @@
     <!-- Link to css file -->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
    <!-- Link to moment.js -->
-   <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -21,41 +21,31 @@
                     <h3>Choo Choo. Chee Chee.</h3>
                 </div>
         </div>
-    </div>
+    
 <!-- Section for Current Train Schedule -->
-
-<div class="container">
     <div class="row">
-        <div class="card">
+        <div class="card" style="width: 100%">
             <div class="card-header">Current Schedule</div>
             <!-- Table for train schedule -->
+            <div class="card-body">
             
-<table class="table table-striped" id="trainSchedule">
-
+<table class="table table-striped table-bordered" id="trainSchedule">
   <thead>
     <tr>
-      <th scope="col">Train Name</th>
-      <th scope="col">Destination</th>
-      <th scope="col">Frequency (min)</th>
-      <th scope="col">Next Arrival</th>
-      <th scope="col">Min Away</th>
+      <th>Train Name</th>
+      <th>Destination</th>
+      <th>Frequency (min)</th>
+      <th>Next Arrival</th>
+      <th>Min Away</th>
     </tr>
   </thead>
+  <!-- Dynamic train info goes here in tbody -->
   <tbody>
-      <!-- <tr>
-          <td id="trainName"></td>
-          <td id="destination"></td>
-          <td id="frequency"></td>
-          <td id="nextArrival"></td>
-          <td id="minAway"></td>
-      </tr> -->
-
-
-
 
   
   </tbody>
 </table>
+    </div>
         </div>
     </div>
 
@@ -65,7 +55,10 @@
     <section id="mainContent">
         <div class="container">
             <div class="row">
-                <div class="card">
+                <div class="card" style="width:100%">
+                    <div class="card-header">Add Train</div>
+
+                    <div class="card-body">
                         <form>
                             <div class="form-group">
                                 <label for="trainName">Train Name</label>
@@ -88,8 +81,7 @@
                             </div>
 
                             <button type="submit" class="btn btn-info" id="submit">Submit</button>
-                        </form>
-                            
+                        </form>    
 
                 </div>
             </div>
